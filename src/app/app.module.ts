@@ -14,6 +14,7 @@ import { Demo02Component } from './demos/demo02/demo02.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exercice02Component } from './exercices/exercice02/exercice02.component';
+import { Demo03Component } from './demos/demo03/demo03.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { Exercice02Component } from './exercices/exercice02/exercice02.component
     Exercice01Component,
     Demo02Component,
     Exercice02Component,
+    Demo03Component,
   ],
   imports: [
     BrowserModule,
