@@ -1,0 +1,51 @@
+<h3>Exercice 02 - Complétion du profil - Two-Way Binding</h3>
+
+<p>Créer une application qui coupe l'écran en deux.</p>
+<p>A gauche, un formulaire reprenant les informations de l'utilisateur.</p>
+<p>A droite, le profil de l'utilisateur qui se remplit en même temps que l'utilisateur entre les informations.</p>
+<p>La complétion du profil doit se faire en instantanné.</p>
+<p>Reprennez les différents champs de l'exercice 01 en y personnalisant certains.</p>
+
+<hr>
+
+<div class="d-flex">
+
+    <div class="d-block border">
+        <label>Nom :</label>
+        <input type="text" [(ngModel)]="lastname">
+
+        <label>Prénom :</label>
+        <input type="text" [(ngModel)]="firstname">
+
+        <label>Date de naissance :</label>
+        <input type="date" [(ngModel)]="birthdate">
+
+        <label>Genre :</label>
+        <select [(ngModel)]="gender">
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+        </select>
+
+        <label>Langues :</label>
+        <input type="text" [(ngModel)]="languages">
+
+        <label>Image :</label>
+        <input type="text" [(ngModel)]="image">
+    </div>
+
+    <div class="d-block border">
+
+        <h1>{{ gender === 'homme' ? 'Mr.' : gender === 'femme' ? 'Mme.' : '' }} {{ lastname }} {{ firstname }}</h1>
+
+        <p>Contactez moi à {{ email }}</p>
+        <p>Ne le {{ birthdate }}</p>
+
+        <img src="{{ image }}" alt="Photo de profil" width="150">
+
+        <p>Langues parlées :</p>
+        <p>{{ languages }}</p>
+
+    </div>
+
+</div>

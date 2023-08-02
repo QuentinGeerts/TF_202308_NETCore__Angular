@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { Demo02Component } from './demos/demo02/demo02.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
 import { ExercicesComponent } from './exercices/exercices.component';
+import { Exercice02Component } from './exercices/exercice02/exercice02.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ExercicesComponent } from './exercices/exercices.component';
     Demo01Component,
     Exercice01Component,
     Demo02Component,
+    Exercice02Component,
   ],
   imports: [
     BrowserModule,
