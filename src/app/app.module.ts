@@ -5,9 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
+
+import { Demo01Component } from './demos/demo01/demo01.component';
 import { DemosComponent } from './demos/demos.component';
+
 import { ExercicesComponent } from './exercices/exercices.component';
+
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,7 @@ import { ExercicesComponent } from './exercices/exercices.component';
     AboutComponent,
     DemosComponent,
     ExercicesComponent,
+    Demo01Component,
   ],
   imports: [
     BrowserModule,
