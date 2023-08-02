@@ -1,0 +1,28 @@
+<h3>Exercice 01 - Créer son profil - One Way Binding</h3>
+<p>Vous devez créer une application Angular pour permettre aux utilisateurs de créer leur propre profil personnel.</p>
+
+<p>L'application doit contenir les champs suivants :</p>
+
+<ul>
+    <li>Nom complet</li>
+    <li>Adresse e-mail</li>
+    <li>Date de naissance</li>
+    <li>Genre</li>
+    <li>Langues parlées</li>
+    <li>Image de profil (optionnelle)</li>
+</ul>
+
+<hr>
+
+<h1>{{ gender === 'homme' ? 'Mr.' : 'Mme.' }} {{ lastname }} {{ firstname }}</h1>
+
+<p>Contactez moi à {{ email }}</p>
+<p>Ne le {{ birthdate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) }}</p>
+
+<img src="{{ image }}" alt="Photo de profil" width="150">
+
+<p>Langues parlées :</p>
+<ul>
+    <li>{{ languages[0] }}</li>
+    <li>{{ languages[1] }}</li>
+</ul>
