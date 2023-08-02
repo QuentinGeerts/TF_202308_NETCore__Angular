@@ -9,8 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { DemosComponent } from './demos/demos.component';
 
-import { ExercicesComponent } from './exercices/exercices.component';
+import { FormsModule } from '@angular/forms';
+import { Demo02Component } from './demos/demo02/demo02.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
+import { ExercicesComponent } from './exercices/exercices.component';
 
 
 @NgModule({
@@ -21,10 +23,12 @@ import { Exercice01Component } from './exercices/exercice01/exercice01.component
     ExercicesComponent,
     Demo01Component,
     Exercice01Component,
+    Demo02Component,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule // Important pour le fonctionnement du routing
+    AppRoutingModule, // Important pour le fonctionnement du routing
+    FormsModule, // Important pour le fonctionnement du Two-Way Binding
   ],
   providers: [],
   bootstrap: [AppComponent]
