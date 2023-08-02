@@ -15,6 +15,7 @@ import { Exercice01Component } from './exercices/exercice01/exercice01.component
 import { ExercicesComponent } from './exercices/exercices.component';
 import { Exercice02Component } from './exercices/exercice02/exercice02.component';
 import { Demo03Component } from './demos/demo03/demo03.component';
+import { Exercice03Component } from './exercices/exercice03/exercice03.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { Demo03Component } from './demos/demo03/demo03.component';
     Demo02Component,
     Exercice02Component,
     Demo03Component,
+    Exercice03Component,
   ],
   imports: [
     BrowserModule,
