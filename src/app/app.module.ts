@@ -27,6 +27,9 @@ import { Demo07Component } from './demos/demo07/demo07.component';
 import { SecondsToDHMSPipe } from './shared/pipes/seconds-to-dhms.pipe';
 import { GetFormateurPipe } from './shared/pipes/get-formateur.pipe';
 import { ReducePipe } from './shared/pipes/reduce.pipe';
+import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
+import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
+import { ChronoPipe } from './shared/pipes/chrono.pipe';
 
 
 @NgModule({
@@ -52,6 +55,9 @@ import { ReducePipe } from './shared/pipes/reduce.pipe';
     SecondsToDHMSPipe,
     GetFormateurPipe,
     ReducePipe,
+    Exercice07dot1Component,
+    Exercice07dot2Component,
+    ChronoPipe,
   ],
   imports: [
     BrowserModule,
