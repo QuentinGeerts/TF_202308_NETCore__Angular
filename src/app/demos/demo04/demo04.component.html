@@ -1,0 +1,23 @@
+<h3>Demo 04 - Attribute Binding</h3>
+
+<p>Permet de lier un attribut (HTML) avec le JavaScript</p>
+<p>Tous les attributs HTML sont touchables</p>
+<p>Symbolisé par des [ ]</p>
+
+<input type="number" [(ngModel)]="maVariable">
+<label><input type="checkbox" [(ngModel)]="isEnabled"> Activer le bouton {{ isEnabled }}</label>
+
+<br>
+
+<button [disabled]="!isEnabled">Clique ici</button>
+<button [disabled]="maVariable < 5">Clique ici</button>
+
+<br>
+
+<label><input type="range" [min]="min" [max]="max" [(ngModel)]="rangeValue"> {{ rangeValue }} [{{ min }} - {{ max }}] </label>
+
+<p>
+    <a [href]="url" [target]="">Vers {{ urlName }}</a>
+</p>
+
+<a [href]="src" target="_blank"><img [src]="src" [alt]="alt" [width]="width"></a>
