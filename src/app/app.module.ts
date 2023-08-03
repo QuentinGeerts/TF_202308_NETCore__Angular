@@ -21,6 +21,7 @@ import { Exercice04Component } from './exercices/exercice04/exercice04.component
 import { Demo05Component } from './demos/demo05/demo05.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { Exercice05Component } from './exercices/exercice05/exercice05.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
     Demo05Component,
     NavbarComponent,
     NotFoundComponent,
+    Exercice05Component,
   ],
   imports: [
     BrowserModule,
