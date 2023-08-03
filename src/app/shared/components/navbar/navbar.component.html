@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">Formation Angular</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Démonstrations
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="demos/demo01">Demo 01 - One Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo02">Demo 02 - Two Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo03">Demo 03 - Event Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo04">Demo 04 - Attribute Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo05">Demo 05 - La base du routing</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/notfound">Demo 05 - Not found</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
