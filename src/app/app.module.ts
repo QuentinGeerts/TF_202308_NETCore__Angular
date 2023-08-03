@@ -22,6 +22,7 @@ import { Demo05Component } from './demos/demo05/demo05.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { Exercice05Component } from './exercices/exercice05/exercice05.component';
+import { Demo06Component } from './demos/demo06/demo06.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { Exercice05Component } from './exercices/exercice05/exercice05.component
     NavbarComponent,
     NotFoundComponent,
     Exercice05Component,
+    Demo06Component,
   ],
   imports: [
     BrowserModule,

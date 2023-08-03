@@ -1,0 +1,85 @@
+<h3>Demo 06 - Pipes</h3>
+
+<p>Les pipes (ou filtres) sont des fonctions qui permettent de transformer les données affichées dans la vue.</p>
+<p>Les pipes sont utilisées pour formater, trier, filtrer ou limiter les données affichées.</p>
+
+<p>Les pipes sont utilisés dans les expressions d'interpolation {{ "{{ expression | pipe }}" }} ou dans les directives de liaison de propriété ([prop]="expression | pipe")</p>
+
+<p>Angular fournit un certain nombre de pipes intégrés, tels que : "date", "uppercase", "lowercase", "currency", "decimal", "percent", "async", "json", ...</p>
+<p>Vous pouvez également créer vos propres pipes personnalisés (Demo 07)</p>
+
+<h4>Exemples :</h4>
+
+<h5>String</h5>
+
+<p><a href="https://angular.io/api/common/UpperCasePipe" target="_blank">UpperCasePipe</a></p>
+<p><a href="https://angular.io/api/common/LowerCasePipe" target="_blank">LowerCasePipe</a></p>
+<p><a href="https://angular.io/api/common/TitleCasePipe" target="_blank">TitleCasePipe</a></p>
+
+<p>Avant : "Hello World all !"</p>
+<p>UpperCasePipe : {{ "Hello World all !" | uppercase }}</p>
+<p>LowerCasePipe : {{ "Hello World all !" | lowercase }}</p>
+<p>TitleCasePipe : {{ "Hello World all !" | titlecase }}</p>
+
+<h5>Number</h5>
+
+<p><a href="https://angular.io/api/common/DecimalPipe">DecimalPipe</a></p>
+
+<p>{{ "{{ value_expression | number [ : digitsInfo [ : locale ] ] }}" }}</p>
+<p>minIntergerDigits . minDecimalDigits - maxDecimalDigits</p>
+
+<p>Avant : 56123.12345</p>
+<p>Après : {{ 56123.12345 | number }}</p>
+
+<p>Après : {{ 123 | number : '4.2-4' }}</p>
+<p>Après : {{ 123.02274 | number : '4.2-4' }}</p> <!--arrondis : inférieur → 0-4 - supérieur → 5-9 -->
+
+<!-- Pour activer le local => main.ts -->
+<p>Après : {{ 123 | number : '4.2-4' : 'fr-FR' }}</p>
+
+<h5>Date</h5>
+
+<p><a href="https://angular.io/api/common/DatePipe">DatePipe</a></p>
+
+<p>{{ "{{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }}" }}</p>
+
+<p>Avant : {{ today }}</p>
+<p>Après : {{ today | date }}</p>
+<p>Après : {{ today | date : 'dd MMMM YYYY HH:mm:ss' }}</p>
+<p>Après : {{ today | date : 'dd MMMM YYYY HH:mm:ss' : '+0200' }}</p>
+<p>Après : {{ today | date : 'dd MMMM YYYY HH:mm:ss' : '+0200' : 'fr-FR' }}</p>
+
+<p>Après : {{ today | date : 'dd MMMM YYYY HH:mm:ss' : '+0200' : 'fr-FR' | titlecase }}</p>
+
+<h5>Percent</h5>
+
+<p><a href="https://angular.io/api/common/PercentPipe">PercentPipe</a></p>
+<p>{{ "{{ value_expression | percent [ : digitsInfo [ : locale ] ] }}" }}</p>
+
+<p>Avant : {{ 0.2345 }}</p>
+<p>Après : {{ 0.2345 | percent }}</p>
+<p>Après : {{ 0.2345 | percent : '2.2-2' }}</p>
+
+<h5>Currency</h5>
+
+<p><a href="https://angular.io/api/common/CurrencyPipe">CurrencyPipe</a></p>
+
+<p>{{ "{{ value_expression | currency [ : currencyCode [ : display [ : digitsInfo [ : locale ] ] ] ] }}" }}</p>
+
+<p>Avant : {{ 12.34 }}</p>
+<p>Après : {{ 12.34 | currency }}</p>
+<p>Après : {{ 12.34 | currency : 'EUR' }}</p>
+<p>Après : {{ 12.34 | currency : 'JPY' }}</p>
+<p>Après : {{ 12.34 | currency : 'EUR' : 'symbol' }}</p>
+<p>Après : {{ 12.34 | currency : 'EUR' : 'code' }}</p>
+<p>Après : {{ 12.34 | currency : 'EUR' : 'code' : '4.2-4' }}</p>
+<p>Après : {{ 12.34 | currency : 'EUR' : 'symbol' : '4.2-4' : 'fr-FR' }}</p>
+
+<h5>Json</h5>
+
+<p><a href="https://angular.io/api/common/JsonPipe">JsonPipe</a></p>
+
+<p>{{ "{{ value_expression | json }}" }}</p>
+
+<p>Avant : {{ quentin }}</p>
+<p>Après : {{ quentin | json }}</p>
