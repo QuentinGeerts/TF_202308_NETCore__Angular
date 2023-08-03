@@ -16,6 +16,7 @@ import { Exercice04Component } from './exercices/exercice04/exercice04.component
 import { Exercice05Component } from './exercices/exercice05/exercice05.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 
+import { Demo07Component } from './demos/demo07/demo07.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: 'demo04', component: Demo04Component },
       { path: 'demo05', component: Demo05Component },
       { path: 'demo06', component: Demo06Component },
+      { path: 'demo07', component: Demo07Component },
     ]
   },
 

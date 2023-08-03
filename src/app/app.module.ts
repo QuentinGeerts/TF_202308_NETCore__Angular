@@ -23,6 +23,10 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { Exercice05Component } from './exercices/exercice05/exercice05.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
+import { Demo07Component } from './demos/demo07/demo07.component';
+import { SecondsToDHMSPipe } from './shared/pipes/seconds-to-dhms.pipe';
+import { GetFormateurPipe } from './shared/pipes/get-formateur.pipe';
+import { ReducePipe } from './shared/pipes/reduce.pipe';
 
 
 @NgModule({
@@ -44,6 +48,10 @@ import { Demo06Component } from './demos/demo06/demo06.component';
     NotFoundComponent,
     Exercice05Component,
     Demo06Component,
+    Demo07Component,
+    SecondsToDHMSPipe,
+    GetFormateurPipe,
+    ReducePipe,
   ],
   imports: [
     BrowserModule,

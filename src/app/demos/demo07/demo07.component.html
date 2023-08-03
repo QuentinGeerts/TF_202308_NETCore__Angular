@@ -1,0 +1,25 @@
+<h3>Demo 07 - Custom Pipes</h3>
+
+<p>
+    Les customs pipes sont des pipes créés par les devs pour répondre aux besoins spécifiques de l'application.
+    Les customs pipes sont créés en utilisant l'interface PipeTransform fournie par Angular, qui contient une méthode "transform" permettant de transformer les données en entrée.
+</p>
+
+<p>Commande pour créer un pipe : ng generate pipe nom_pipe</p>
+
+<h4>Transformation d'un nombre en jours heures minutes et secondes</h4>
+
+<label for="nbsecondes">Nombre de secondes : </label>
+<input type="number" [(ngModel)]="nbSecondes" id="nbsecondes">
+
+<p>Nombre de secondes original : {{ nbSecondes }}</p>
+<p>Nombre de secondes transformé : {{ nbSecondes | secondsToDHMS }}</p>
+
+<h4>Récupération d'un objet sur base de son id</h4>
+
+<p>Liste : {{ formateurs | json }}</p>
+<p>Id 001 : {{ formateurs | getFormateur : '003' : 'prenom' }}</p>
+
+<h4>Somme des valeurs</h4>
+
+<p>Somme : {{ 0 | reduce : 1 : 2 : 4 : 1 : 10 }}</p>
