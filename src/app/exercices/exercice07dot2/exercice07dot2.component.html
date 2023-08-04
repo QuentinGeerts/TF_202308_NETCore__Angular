@@ -1,7 +1,30 @@
-<h2>Exercice 07.2 - Convertisseur de degré</h2>
+<h3>Exercice 07.2 - Convertisseur de degré</h3>
 
 <p>Créer une application qui permet de convertir une température de °C à °F et inversément.</p>
 <p>Deux pipes, un "toFahrenheit" et "toCelsius" qui permettent de convertir une température vers une unité spécifique.</p>
 <p>Un pipe universel qui permet de convertir vers l'unité souhaité en paramètre du pipe.</p>
 
 <hr>
+
+<h4>To Fahrenheit :</h4>
+<input type="number" [(ngModel)]="temperature1">
+<p>{{ temperature1 }} °F → {{ temperature1 | toFahrenheit }} °C</p>
+
+<h4>To Celsius :</h4>
+<input type="number" [(ngModel)]="temperature2">
+<p>{{ temperature2 }} °C → {{ temperature2 | toCelsius }} °F</p>
+
+<h4>Universal Converter</h4>
+<input type="number" [(ngModel)]="temperature3">
+<select [(ngModel)]="selectedUnite">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+</select>
+<select [(ngModel)]="targetUnite">
+    <option value="celsius">Celsius</option>
+    <option value="fahrenheit">Fahrenheit</option>
+    <option value="kelvin">Kelvin</option>
+</select>
+
+<p>{{ temperature3 }} °{{ selectedUnite === 'celsius' ? 'C' : selectedUnite === 'fahrenheit' ? 'F' : 'K' }} → {{ temperature3 | temperatureConverter : selectedUnite : targetUnite }} °{{ targetUnite === 'celsius' ? 'C' : targetUnite === 'fahrenheit' ? 'F' : 'K' }}</p>

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class Exercice07dot2Component {
 
+  temperature1: number = 0;
+  temperature2: number = 0;
+  temperature3: number = 0;
+
+  selectedUnite: string = "celsius";
+  targetUnite: string = "celsius";
+
 }
