@@ -37,6 +37,9 @@ import { Demo08Component } from './demos/demo08/demo08.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
 import { Exercice09Component } from './exercices/exercice09/exercice09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { PrepareRenderDirective } from './shared/directives/prepare-render.directive';
+import { HighlightDirective } from './shared/directives/highlight.directive';
 
 
 @NgModule({
@@ -72,6 +75,9 @@ import { Exercice09Component } from './exercices/exercice09/exercice09.component
     Exercice08Component,
     Demo09Component,
     Exercice09Component,
+    Demo10Component,
+    PrepareRenderDirective,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
