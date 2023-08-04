@@ -46,7 +46,7 @@
 
 <label>
     Style : {{ borderStyle }}
-    <select [(ngModel)]="borderStyle" (input)="update()">
+    <select [(ngModel)]="borderStyle" (change)="update()">
         <option value="none">None</option>
         <option value="hidden">Hidden</option>
         <option value="dotted">Dotted</option>

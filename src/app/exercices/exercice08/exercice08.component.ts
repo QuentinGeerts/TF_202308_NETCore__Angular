@@ -32,7 +32,7 @@ export class Exercice08Component implements OnInit {
       'background-color': this.color,
       'border-width': this.borderWidth + 'px',
       'border-color': this.borderColor,
-      'border-style': this.borderStyle,
+      'border-style': this.borderStyle
     };
   }
 
