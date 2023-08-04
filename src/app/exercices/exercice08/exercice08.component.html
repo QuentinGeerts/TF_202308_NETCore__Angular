@@ -9,3 +9,56 @@
 
 <hr>
 
+<h4>Propriétés du quadrilatères :</h4>
+
+<label>
+    Hauteur : {{ height }}
+    <input type="range" [(ngModel)]="height" [min]="min" [max]="max" (input)="update()">
+</label>
+
+<label>
+    Largeur : {{ width }}
+    <input type="range" [(ngModel)]="width" [min]="min" [max]="max" (input)="update()">
+</label>
+
+<label>
+    Couleur : {{ color }}
+    <input type="color" [(ngModel)]="color" (input)="update()">
+</label>
+
+<label>
+    <input type="checkbox" [(ngModel)]="isCircle" (input)="update()">
+    Cercle
+</label>
+
+
+<h4>Propriétés de la bordure :</h4>
+
+<label>
+    Largeur : {{ borderWidth }}
+    <input type="range" [(ngModel)]="borderWidth" [min]="0" [max]="10" (input)="update()">
+</label>
+
+<label>
+    Couleur : {{ borderColor }}
+    <input type="color" [(ngModel)]="borderColor" (input)="update()">
+</label>
+
+<label>
+    Style : {{ borderStyle }}
+    <select [(ngModel)]="borderStyle" (input)="update()">
+        <option value="none">None</option>
+        <option value="hidden">Hidden</option>
+        <option value="dotted">Dotted</option>
+        <option value="dashed">Dashed</option>
+        <option value="solid">Solid</option>
+        <option value="double">Double</option>
+        <option value="groove">Groove</option>
+        <option value="ridge">Ridge</option>
+        <option value="inset">Inset</option>
+        <option value="outset">Outset</option>
+    </select>
+</label>
+
+
+<div [ngStyle]="styles" [ngClass]="{ circle: isCircle  }"></div>
