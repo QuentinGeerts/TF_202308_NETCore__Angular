@@ -1,1 +1,38 @@
-<p>exercice09 works!</p>
+<h3>Exercice 09 - Panier de courses - Les directives structurelles</h3>
+
+<p>Créer une application qui permet à l'utilisateur de saisir un nom d'article et une quantité.</p>
+
+<p>L'application doit pouvoir également afficher la liste des articles avec la quantité et la date d'ajout. (formatée)
+</p>
+
+<p>L'utilisateur peut également supprimer un élément de la liste.</p>
+
+<p>Utilisez le model fournis pour réaliser l'exercice.</p>
+
+<hr>
+
+<h4>Ajouter un produit</h4>
+<div class="d-block">
+    <label>Nom du produit :</label>
+    <input type="text" [(ngModel)]="productName" id="product_name">
+
+    <label>Quantité :</label>
+    <input type="number" [(ngModel)]="productQuantity" min="0">
+
+    <button (click)="addProduct()">Ajouter</button>
+</div>
+
+<h4>Liste de courses</h4>
+
+<ul *ngIf="cart.length; else anyProduct">
+    <li *ngFor="let product of cart; index as i">
+        <button (click)="removeProduct(product)">❌</button>
+        {{ product.name }} : {{ product.quantity }} ({{ product.dateAdd | date : 'dd/MM/yyyy à HH:mm:ss' }})
+        <button (click)="decrease(i)">-</button>
+        <button (click)="increase(i)">+</button>
+    </li>
+</ul>
+
+<ng-template #anyProduct>
+    <p>Il n'y a pas encore d'articles, utiliser le formulaire ci-dessus pour en ajouter.</p>
+</ng-template>

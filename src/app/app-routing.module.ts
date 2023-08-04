@@ -22,6 +22,7 @@ import { Demo09Component } from './demos/demo09/demo09.component';
 import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
+import { Exercice09Component } from './exercices/exercice09/exercice09.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
@@ -51,9 +52,10 @@ const routes: Routes = [
       { path: 'exo03', component: Exercice03Component },
       { path: 'exo04', component: Exercice04Component },
       { path: 'exo05', component: Exercice05Component },
-      { path: 'exo7dot1', component: Exercice07dot1Component },
-      { path: 'exo7dot2', component: Exercice07dot2Component },
+      { path: 'exo07dot1', component: Exercice07dot1Component },
+      { path: 'exo07dot2', component: Exercice07dot2Component },
       { path: 'exo08', component: Exercice08Component },
+      { path: 'exo09', component: Exercice09Component },
     ]
   },
 
