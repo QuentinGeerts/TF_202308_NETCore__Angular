@@ -34,6 +34,7 @@ import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
 import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
 import { Demo08Component } from './demos/demo08/demo08.component';
+import { Exercice08Component } from './exercices/exercice08/exercice08.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { Demo08Component } from './demos/demo08/demo08.component';
     ToCelsiusPipe,
     TemperatureConverterPipe,
     Demo08Component,
+    Exercice08Component,
   ],
   imports: [
     BrowserModule,
