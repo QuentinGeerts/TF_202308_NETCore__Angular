@@ -1,0 +1,15 @@
+.even {
+  background-color: #b4b4b4;
+}
+
+.odd {
+  background-color: lighten($color: #b4b4b4, $amount: 20%);
+}
+
+.first {
+  color: red;
+}
+
+.last {
+  color: chartreuse;
+}

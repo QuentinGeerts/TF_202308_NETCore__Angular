@@ -1,0 +1,54 @@
+<h3>Demo 09 - Les directives structurelles</h3>
+
+<p>Les directives structurelles sont utilisées pour manipuler la structure du DOM en fonction des données du composant
+</p>
+
+<p>Les directives structurelles sont préfixées par le caractère "*" et permettent de créer des éléments conditionnnels
+    ou répétitifs. </p>
+
+<p>Il existe plusieurs directives structurelles :</p>
+<ul>
+    <li>*ngIf : afficher un élément conditionnellement en fonction d'une expression booléenne.</li>
+    <li>*ngFor : permet de répéter un élément HTML pour chaque élément d'un tableau.</li>
+    <li>*ngSwitch : permet d'afficher différents éléments HTML en fonction de la valeur d'une variable.</li>
+</ul>
+
+<h4>*ngIf :</h4>
+
+<button (click)="toggle()">{{ isActive ? "Cacher le texte" : "Afficher le texte" }}</button>
+
+<p *ngIf="isActive; else toto">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis repellat debitis ut labore. Debitis molestiae nemo
+    libero, explicabo illo est repellat similique aut esse mollitia quia quod maxime distinctio aliquid.
+</p>
+
+<ng-template #toto>
+    <p>Cliquez sur le bouton pour afficher le texte</p>
+</ng-template>
+
+<p>
+    ⚠️ Il est impossible d'utiliser plus d'une directive structurelle par élément HTML !
+    ngIf et ngFor en meêm temps !!
+</p>
+
+<h4>*ngFor :</h4>
+
+<ul>
+    <li
+        *ngFor="let fruit of fruits; let i = index; let odd = odd; let even = even; let first = first; let last = last; let count = count">
+        <p [ngClass]="{'odd': odd, 'even': even, 'first': first, 'last': last}">{{ i+1 }}/{{ count }} - {{ fruit }}</p>
+    </li>
+</ul>
+
+<h4>*ngSwitch :</h4>
+
+<input type="text" [(ngModel)]="inputValue">
+
+<div [ngSwitch]="inputValue">
+    <p *ngSwitchCase="1">Valeur 1</p>
+    <p *ngSwitchCase="2">Valeur 2</p>
+    <p *ngSwitchCase="3">Valeur 3</p>
+    <p *ngSwitchCase="4">Valeur 4</p>
+    <p *ngSwitchCase="5">Valeur 5</p>
+    <p *ngSwitchDefault>Aucune valeur trouvée</p>
+</div>
