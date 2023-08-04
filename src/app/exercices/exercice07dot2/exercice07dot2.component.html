@@ -19,12 +19,10 @@
 <select [(ngModel)]="selectedUnite">
     <option value="celsius">Celsius</option>
     <option value="fahrenheit">Fahrenheit</option>
-    <option value="kelvin">Kelvin</option>
 </select>
 <select [(ngModel)]="targetUnite">
     <option value="celsius">Celsius</option>
     <option value="fahrenheit">Fahrenheit</option>
-    <option value="kelvin">Kelvin</option>
 </select>
 
-<p>{{ temperature3 }} °{{ selectedUnite === 'celsius' ? 'C' : selectedUnite === 'fahrenheit' ? 'F' : 'K' }} → {{ temperature3 | temperatureConverter : selectedUnite : targetUnite }} °{{ targetUnite === 'celsius' ? 'C' : targetUnite === 'fahrenheit' ? 'F' : 'K' }}</p>
+<p>{{ temperature3 }} °{{ selectedUnite === 'celsius' ? 'C' : 'F' }} → {{ temperature3 | temperatureConverter : selectedUnite : targetUnite }} °{{ targetUnite === 'celsius' ? 'C' : 'F' }}</p>
