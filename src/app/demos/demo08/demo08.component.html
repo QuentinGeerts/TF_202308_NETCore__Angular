@@ -1,0 +1,17 @@
+<h3>Demo 08 - Les directives de composants</h3>
+
+<h4>NgStyle</h4>
+<p [ngStyle]="currentStyle">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus, in ratione saepe et beatae nisi accusantium! Eveniet, minus. Ipsa tempora dolores ut sit, eum ea reiciendis provident facilis quo?
+</p>
+
+<button (click)="toggleItalic()">Set Italic</button>
+<button (click)="toggleBold()">Set Bold</button>
+<button (click)="toggleSize()">Set Size</button>
+
+<h4>ngClass</h4>
+<p [ngClass]="{maClasse: isActive}">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eius voluptatem inventore quibusdam omnis unde necessitatibus deserunt? Incidunt vitae tempore porro voluptates! Iusto quo officia ullam dolore, corporis aspernatur ad.
+</p>
+
+<button (click)="EnableClass()">{{ isActive ? 'Désactiver' : 'Activer' }} la classe</button>
