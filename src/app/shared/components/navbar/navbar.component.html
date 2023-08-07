@@ -13,10 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" routerLink="">Home</a>
                 </li>
-                
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         📖 Démonstrations
                     </a>
                     <ul class="dropdown-menu">
@@ -28,32 +27,52 @@
                         <li><a class="dropdown-item" routerLink="demos/notfound">Demo 05 - Not found</a></li>
                         <li><a class="dropdown-item" routerLink="demos/demo06">Demo 06 - Pipes</a></li>
                         <li><a class="dropdown-item" routerLink="demos/demo07">Demo 07 - Custom Pipes</a></li>
-                        <li><a class="dropdown-item" routerLink="demos/demo08">Demo 08 - Les directives de composants</a></li>
-                        <li><a class="dropdown-item" routerLink="demos/demo09">Demo 09 - Les directives structurelles</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo08">Demo 08 - Les directives de
+                                composants</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo09">Demo 09 - Les directives
+                                structurelles</a></li>
                         <li><a class="dropdown-item" routerLink="demos/demo10">Demo 10 - Les custom directives</a></li>
                         <li><a class="dropdown-item" routerLink="demos/demo11">Demo 11 - Les Inputs / Outputs</a></li>
+                        <li><a class="dropdown-item" routerLink="demos/demo12">Demo 12 - Services et Injection de
+                                dépendances</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         ✒️ Exercices
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="exercices/exo01">Exercice 01 - Créer son profil</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo02">Exercice 02 - Complétion du profil</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo03">Exercice 03 - Le chronomètre (basique)</a></li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo01">Exercice 01 - Créer son profil</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo02">Exercice 02 - Complétion du profil</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo03">Exercice 03 - Le chronomètre
+                                (basique)</a></li>
                         <li><a class="dropdown-item" routerLink="exercices/exo04">Exercice 04 - Toggle password</a></li>
                         <li><a class="dropdown-item" routerLink="exercices/exo05">Exercice 05 - Menu complet</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo07dot1">Exercice 07.1 - Le chronomètre (Pipe)</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo07dot2">Exercice 07.2 - Convertisseur de degré</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo08">Exercice 08 - Générateur de formes</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo09">Exercice 09 - Panier de courses</a></li>
-                        <li><a class="dropdown-item" routerLink="exercices/exo11">Exercice 11 - Panier de courses (Input/Output)</a></li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo07dot1">Exercice 07.1 - Le chronomètre
+                                (Pipe)</a></li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo07dot2">Exercice 07.2 - Convertisseur de
+                                degré</a></li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo08">Exercice 08 - Générateur de formes</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo09">Exercice 09 - Panier de courses</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="exercices/exo11">Exercice 11 - Panier de courses
+                                (Input/Output)</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">{{ isConnected ? "Connecté" : "Déconnecté" }}</a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </nav>
