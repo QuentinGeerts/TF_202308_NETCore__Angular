@@ -47,6 +47,7 @@ import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ng
 import { Exercice11Component } from './exercices/exercice11/exercice11.component';
 import { ArticleListComponent } from './exercices/exercice11/article-list/article-list.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { Demo12Component } from './demos/demo12/demo12.component';
     Exercice11Component,
     ArticleListComponent,
     Demo12Component,
+    Demo13Component,
   ],
   imports: [
     BrowserModule,
