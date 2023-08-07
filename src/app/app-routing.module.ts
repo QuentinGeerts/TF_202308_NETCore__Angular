@@ -25,6 +25,7 @@ import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07do
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
 import { Exercice09Component } from './exercices/exercice09/exercice09.component';
+import { Exercice11Component } from './exercices/exercice11/exercice11.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
@@ -60,6 +61,7 @@ const routes: Routes = [
       { path: 'exo07dot2', component: Exercice07dot2Component },
       { path: 'exo08', component: Exercice08Component },
       { path: 'exo09', component: Exercice09Component },
+      { path: 'exo11', component: Exercice11Component },
     ]
   },
 
