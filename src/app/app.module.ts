@@ -40,6 +40,10 @@ import { Exercice09Component } from './exercices/exercice09/exercice09.component
 import { Demo10Component } from './demos/demo10/demo10.component';
 import { PrepareRenderDirective } from './shared/directives/prepare-render.directive';
 import { HighlightDirective } from './shared/directives/highlight.directive';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
+import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
+import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
 
 
 @NgModule({
@@ -78,6 +82,10 @@ import { HighlightDirective } from './shared/directives/highlight.directive';
     Demo10Component,
     PrepareRenderDirective,
     HighlightDirective,
+    Demo11Component,
+    ChildInputComponent,
+    ChildOutputComponent,
+    ChildNgcontentComponent,
   ],
   imports: [
     BrowserModule,

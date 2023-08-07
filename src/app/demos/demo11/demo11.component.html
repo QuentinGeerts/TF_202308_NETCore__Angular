@@ -1,0 +1,26 @@
+<h3>Demo 11 - Les Inputs / Ouputs</h3>
+
+<p>
+    Les inputs et les ouputs sont des mécanismes de communication entre les composants.
+    Les inputs permettent à un composant parent de fournir des données à un composant enfant, tandis que les outputs permettent à un composant enfant d'émettre des évéments vers son composant parent.
+</p>
+
+<!-- Input -->
+<div>
+    <app-child-input 
+        [messageFromParent]="messageToChild" 
+        [colorFromParent]="colorToChild" />
+    <button (click)="changeColor()">Changer la couleur de l'enfant</button>
+</div>
+
+<!-- Output -->
+<div>
+    <app-child-output (emitToParent)="receiveEmit($event)" />
+</div>
+
+<!-- NgContent -->
+<div>
+    <app-child-ngcontent>
+        <p>Contenu de l'enfant définit dans l'appel du parent</p>
+    </app-child-ngcontent>
+</div>

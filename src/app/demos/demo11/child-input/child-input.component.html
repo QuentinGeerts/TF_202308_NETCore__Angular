@@ -1,0 +1,9 @@
+<h4>Composant enfant input</h4>
+
+<p>
+    Pour définir un input dans un composant enfant, on utilise le décorateur 
+    @Input() suivi du nom de la propriété.
+    Le composant parent peut alors fournir une valeur pour cette propriété lorsqu'il utilise le composant enfant.
+</p>
+
+<p [ngClass]="colorFromParent">Message provenant du parent : {{ messageFromParent }}</p>
