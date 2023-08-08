@@ -9,13 +9,23 @@ import { HomeComponent } from './home/home.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { DemosComponent } from './demos/demos.component';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo02Component } from './demos/demo02/demo02.component';
 import { Demo03Component } from './demos/demo03/demo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
 import { Demo05Component } from './demos/demo05/demo05.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
 import { Demo07Component } from './demos/demo07/demo07.component';
+import { Demo08Component } from './demos/demo08/demo08.component';
+import { Demo09Component } from './demos/demo09/demo09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
+import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
+import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { Demo12Component } from './demos/demo12/demo12.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
+import { Demo14Component } from './demos/demo14/demo14.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
 import { Exercice02Component } from './exercices/exercice02/exercice02.component';
 import { Exercice03Component } from './exercices/exercice03/exercice03.component';
@@ -23,31 +33,22 @@ import { Exercice04Component } from './exercices/exercice04/exercice04.component
 import { Exercice05Component } from './exercices/exercice05/exercice05.component';
 import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
+import { Exercice08Component } from './exercices/exercice08/exercice08.component';
+import { Exercice09Component } from './exercices/exercice09/exercice09.component';
+import { ArticleListComponent } from './exercices/exercice11/article-list/article-list.component';
+import { Exercice11Component } from './exercices/exercice11/exercice11.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { HighlightDirective } from './shared/directives/highlight.directive';
+import { PrepareRenderDirective } from './shared/directives/prepare-render.directive';
 import { ChronoPipe } from './shared/pipes/chrono.pipe';
 import { GetFormateurPipe } from './shared/pipes/get-formateur.pipe';
 import { ReducePipe } from './shared/pipes/reduce.pipe';
 import { SecondsToDHMSPipe } from './shared/pipes/seconds-to-dhms.pipe';
-import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
-import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
-import { Demo08Component } from './demos/demo08/demo08.component';
-import { Exercice08Component } from './exercices/exercice08/exercice08.component';
-import { Demo09Component } from './demos/demo09/demo09.component';
-import { Exercice09Component } from './exercices/exercice09/exercice09.component';
-import { Demo10Component } from './demos/demo10/demo10.component';
-import { PrepareRenderDirective } from './shared/directives/prepare-render.directive';
-import { HighlightDirective } from './shared/directives/highlight.directive';
-import { Demo11Component } from './demos/demo11/demo11.component';
-import { ChildInputComponent } from './demos/demo11/child-input/child-input.component';
-import { ChildOutputComponent } from './demos/demo11/child-output/child-output.component';
-import { ChildNgcontentComponent } from './demos/demo11/child-ngcontent/child-ngcontent.component';
-import { Exercice11Component } from './exercices/exercice11/exercice11.component';
-import { ArticleListComponent } from './exercices/exercice11/article-list/article-list.component';
-import { Demo12Component } from './demos/demo12/demo12.component';
-import { Demo13Component } from './demos/demo13/demo13.component';
+import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
+import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
 
 
 @NgModule({
@@ -94,11 +95,13 @@ import { Demo13Component } from './demos/demo13/demo13.component';
     ArticleListComponent,
     Demo12Component,
     Demo13Component,
+    Demo14Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // Important pour le fonctionnement du routing
     FormsModule, // Important pour le fonctionnement du Two-Way Binding
+    ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
   ],
   providers: [],
   bootstrap: [AppComponent]

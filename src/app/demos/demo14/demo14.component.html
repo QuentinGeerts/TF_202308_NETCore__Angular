@@ -1,0 +1,56 @@
+<h3>Demo 14 - Les formulaires (Validators)</h3>
+
+<h4>Avec Two-Way Binding</h4>
+
+<div class="d-block">
+    <label>Name : {{ name }}</label>
+    <input type="text" [(ngModel)]="name">
+
+    <label>Email : {{ email }}</label>
+    <input type="email" [(ngModel)]="email">
+
+    <label>Password : {{ password }}</label>
+    <input type="password" [(ngModel)]="password">
+
+    <label>Tel : {{ tel }}</label>
+    <input type="tel" [(ngModel)]="tel">
+
+    <button (click)="send()">Envoyer</button>
+</div>
+
+<hr>
+
+<h4>Avec Validators</h4>
+
+<h4>Form Control (abstractControl)</h4>
+<p *ngIf="myForm.pristine">Pristine</p>
+<p *ngIf="myForm.touched">Touched</p>
+<p *ngIf="myForm.invalid">invalid</p>
+<p *ngIf="myForm.valid">valid</p>
+
+<h4>Form Control individuel</h4>
+<p *ngIf="myForm.controls['name'].valid">Name valid</p>
+<p *ngIf="myForm.controls['email'].valid">Email valid</p>
+<p *ngIf="myForm.controls['password'].valid">Password valid</p>
+<p *ngIf="myForm.controls['tel'].valid">Tel valid</p>
+
+<div>
+    <form class="d-block" [formGroup]="myForm">
+        <label>Name :</label>
+        <input type="text" formControlName="name" [ngClass]="{error: myForm.controls['name'].invalid}">
+        <p *ngIf="myForm.controls['name'].errors?.['required']">Requis</p>
+        <p *ngIf="myForm.controls['name'].errors?.['minlength'] || myForm.controls['name'].errors?.['maxlength']">Entre 2 et 20 caractères</p>
+
+        <label>Email :</label>
+        <input type="email" formControlName="email">
+
+        <label>Password :</label>
+        <input type="password" formControlName="password">
+
+        <label>Tel :</label>
+        <input type="tel" formControlName="tel">
+
+        <button (click)="send()">Envoyer</button>
+
+    </form>
+</div>
