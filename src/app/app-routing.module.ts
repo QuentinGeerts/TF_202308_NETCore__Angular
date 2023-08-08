@@ -28,6 +28,7 @@ import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
 import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
@@ -39,6 +40,7 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 import { confirmGuard } from './shared/guards/confirm.guard';
 import { isAuthGuard } from './shared/guards/is-auth.guard';
 import { isLoggedInGuard } from './shared/guards/is-logged-in.guard';
+import { userResolver } from './shared/resolvers/user.resolver';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -63,6 +65,9 @@ const routes: Routes = [
       { path: 'demo15', component: Demo15Component },
       { path: 'demo16', component: Demo16Component },
 
+      { path: 'routage', component: Demo16Component },
+      { path: 'routage/:id', component: Demo16Component },
+      
       {
         path: 'demo17', children: [
           { path: '', component: Demo17Component },
@@ -70,9 +75,10 @@ const routes: Routes = [
         ]
       },
 
+      { path: 'demo18', component: Demo18Component },
+      { path: 'demo18/:id', component: Demo18Component, resolve: { user: userResolver } },
 
-      { path: 'routage', component: Demo16Component },
-      { path: 'routage/:id', component: Demo16Component },
+
     ]
   },
 

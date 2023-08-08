@@ -54,6 +54,7 @@ import { Exercice15Component } from './exercices/exercice15/exercice15.component
 import { Demo16Component } from './demos/demo16/demo16.component';
 import { Demo17Component } from './demos/demo17/demo17.component';
 import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
 
 
 @NgModule({
@@ -106,6 +107,7 @@ import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guard
     Demo16Component,
     Demo17Component,
     Demo17guardedComponent,
+    Demo18Component,
   ],
   imports: [
     BrowserModule,
