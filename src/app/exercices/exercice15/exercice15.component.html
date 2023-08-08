@@ -1,0 +1,19 @@
+<h3>Exercice 15 - Vérification d'âge</h3>
+
+<p>Créer une application qui permet à l'utilisateur de rentrer sa date de naissance via un formulaire.</p>
+<p>Vous devez créer un custom validator qui permet de vérifier si la personne est majeure ou non. </p>
+<p>Dans le cas où elle est mineure, elle ne pourra pas valider le formulaire.</p>
+
+<hr>
+
+<form [formGroup]="myForm">
+
+    <label>Date de naissance :</label>
+    <input type="date" formControlName="birthdate">
+    <ng-container *ngIf="myForm.controls['birthdate'].touched && myForm.controls['birthdate'].errors">
+        <p>{{ myForm.controls['birthdate'].errors['message'] }}</p>
+    </ng-container>
+
+    <button [disabled]="myForm.invalid">Se connecter</button>
+
+</form>
