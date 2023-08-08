@@ -1,0 +1,33 @@
+<h3>Demo 17 - Les Guards</h3>
+
+<p>
+    Les guards sont des mécanismes qui permettent de contrôler la navigation dans une application.
+    Les guards sont des classes qui implémentent l'interface "CanActivate", "CanActivateChild", "CanLoad", "CanDesactivate".
+</p>
+
+<p>État de connexion : {{ isConnected ? 'Connecté' : 'Déconnecté' }}</p>
+
+<div *ngIf="!isConnected" class="d-block">
+
+    <p *ngIf="message">{{ message }}</p>
+
+    <label>Identifiant : </label>
+    <input type="text" [(ngModel)]="username">
+ 
+    <label>Mot de passe : </label>
+    <input type="password" [(ngModel)]="password">
+
+    <button (click)="logIn()">Connexion</button>
+
+    
+</div>
+
+<button *ngIf="isConnected" (click)="logOut()">Déconnexion</button>
+
+<a routerLink="/demos/demo17/demo17guarded">Se rendre sur la page protégée</a>
+
+<h4>CanActivate</h4>
+<p>
+    Est utilisé pour déterminer si un utilisateur a le droit d'accéder à une page en vérifiant les permissions de l'utilisateur ou en effectuant des opérations d'authentifications.
+</p>
+

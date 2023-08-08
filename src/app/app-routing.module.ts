@@ -26,6 +26,8 @@ import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { Demo15Component } from './demos/demo15/demo15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
 import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
@@ -34,6 +36,9 @@ import { Exercice11Component } from './exercices/exercice11/exercice11.component
 import { Exercice15Component } from './exercices/exercice15/exercice15.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
+import { confirmGuard } from './shared/guards/confirm.guard';
+import { isAuthGuard } from './shared/guards/is-auth.guard';
+import { isLoggedInGuard } from './shared/guards/is-logged-in.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -58,6 +63,13 @@ const routes: Routes = [
       { path: 'demo15', component: Demo15Component },
       { path: 'demo16', component: Demo16Component },
 
+      {
+        path: 'demo17', children: [
+          { path: '', component: Demo17Component },
+          { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isAuthGuard], canDeactivate: [confirmGuard] },
+        ]
+      },
+
 
       { path: 'routage', component: Demo16Component },
       { path: 'routage/:id', component: Demo16Component },
@@ -65,7 +77,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'exercices', children: [
+    path: 'exercices', canActivateChild: [isLoggedInGuard], children: [
       { path: '', component: ExercicesComponent },
       { path: 'exo01', component: Exercice01Component },
       { path: 'exo02', component: Exercice02Component },

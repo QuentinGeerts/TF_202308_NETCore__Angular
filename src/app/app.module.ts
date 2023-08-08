@@ -52,6 +52,8 @@ import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
 import { Demo15Component } from './demos/demo15/demo15.component';
 import { Exercice15Component } from './exercices/exercice15/exercice15.component';
 import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
 
 
 @NgModule({
@@ -102,6 +104,8 @@ import { Demo16Component } from './demos/demo16/demo16.component';
     Demo15Component,
     Exercice15Component,
     Demo16Component,
+    Demo17Component,
+    Demo17guardedComponent,
   ],
   imports: [
     BrowserModule,
