@@ -1,0 +1,22 @@
+<h3>Demo 15 - Les custom Validators</h3>
+
+<div>
+    <form [formGroup]="myForm">
+
+        <label>Email :</label>
+        <input type="text" formControlName="email">
+        <p *ngIf="myForm.controls['email'].touched && myForm.controls['email'].errors">
+            {{ myForm.controls['email'].errors['message'] }}
+        </p>
+
+        <label>Password :</label>
+        <input type="password" formControlName="password">
+        <ng-container *ngIf="myForm.controls['confirmPassword'].touched">
+            <span *ngIf="myForm.errors">{{ myForm.errors['message'] }}</span>
+        </ng-container>
+
+        <label>Confirm password :</label>
+        <input type="password" formControlName="confirmPassword">
+
+    </form>
+</div>
