@@ -31,6 +31,9 @@ import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guard
 import { Demo18Component } from './demos/demo18/demo18.component';
 import { Demo19Component } from './demos/demo19/demo19.component';
 import { Demo20Component } from './demos/demo20/demo20.component';
+import { AddComponent } from './demos/demo21/add/add.component';
+import { Demo21Component } from './demos/demo21/demo21.component';
+import { UpdateComponent } from './demos/demo21/update/update.component';
 import { Exercice07dot1Component } from './exercices/exercice07dot1/exercice07dot1.component';
 import { Exercice07dot2Component } from './exercices/exercice07dot2/exercice07dot2.component';
 import { Exercice08Component } from './exercices/exercice08/exercice08.component';
@@ -82,6 +85,9 @@ const routes: Routes = [
 
       { path: 'demo19', component: Demo19Component },
       { path: 'demo20', component: Demo20Component },
+      { path: 'demo21', component: Demo21Component },
+      { path: 'demo21/add', component: AddComponent },
+      { path: 'demo21/update/:id', component: UpdateComponent },
 
     ]
   },

@@ -1,0 +1,13 @@
+<h4>Éditer un produit</h4>
+
+<button routerLink="/demos/demo21">Retourner à la liste des produits</button>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" formControlName="name">
+
+    <label for="price">Prix :</label>
+    <input type="text" id="price" formControlName="price">
+
+    <button>Ajouter</button>
+</form>

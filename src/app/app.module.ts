@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -26,6 +27,14 @@ import { Demo11Component } from './demos/demo11/demo11.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
+import { Demo15Component } from './demos/demo15/demo15.component';
+import { Demo16Component } from './demos/demo16/demo16.component';
+import { Demo17Component } from './demos/demo17/demo17.component';
+import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
+import { Demo18Component } from './demos/demo18/demo18.component';
+import { Demo19Component } from './demos/demo19/demo19.component';
+import { Demo20Component } from './demos/demo20/demo20.component';
+import { Demo21Component } from './demos/demo21/demo21.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
 import { Exercice02Component } from './exercices/exercice02/exercice02.component';
 import { Exercice03Component } from './exercices/exercice03/exercice03.component';
@@ -37,6 +46,7 @@ import { Exercice08Component } from './exercices/exercice08/exercice08.component
 import { Exercice09Component } from './exercices/exercice09/exercice09.component';
 import { ArticleListComponent } from './exercices/exercice11/article-list/article-list.component';
 import { Exercice11Component } from './exercices/exercice11/exercice11.component';
+import { Exercice15Component } from './exercices/exercice15/exercice15.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
@@ -49,14 +59,8 @@ import { SecondsToDHMSPipe } from './shared/pipes/seconds-to-dhms.pipe';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
 import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
 import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
-import { Demo15Component } from './demos/demo15/demo15.component';
-import { Exercice15Component } from './exercices/exercice15/exercice15.component';
-import { Demo16Component } from './demos/demo16/demo16.component';
-import { Demo17Component } from './demos/demo17/demo17.component';
-import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guarded.component';
-import { Demo18Component } from './demos/demo18/demo18.component';
-import { Demo19Component } from './demos/demo19/demo19.component';
-import { Demo20Component } from './demos/demo20/demo20.component';
+import { AddComponent } from './demos/demo21/add/add.component';
+import { UpdateComponent } from './demos/demo21/update/update.component';
 
 
 @NgModule({
@@ -112,12 +116,16 @@ import { Demo20Component } from './demos/demo20/demo20.component';
     Demo18Component,
     Demo19Component,
     Demo20Component,
+    Demo21Component,
+    AddComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, // Important pour le fonctionnement du routing
     FormsModule, // Important pour le fonctionnement du Two-Way Binding
     ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
+    HttpClientModule, // Important pour la communication avec une API
   ],
   providers: [],
   bootstrap: [AppComponent]
