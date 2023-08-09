@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -34,7 +34,10 @@ import { Demo17guardedComponent } from './demos/demo17/demo17guarded/demo17guard
 import { Demo18Component } from './demos/demo18/demo18.component';
 import { Demo19Component } from './demos/demo19/demo19.component';
 import { Demo20Component } from './demos/demo20/demo20.component';
+import { AddComponent } from './demos/demo21/add/add.component';
 import { Demo21Component } from './demos/demo21/demo21.component';
+import { UpdateComponent } from './demos/demo21/update/update.component';
+import { Demo22Component } from './demos/demo22/demo22.component';
 import { Exercice01Component } from './exercices/exercice01/exercice01.component';
 import { Exercice02Component } from './exercices/exercice02/exercice02.component';
 import { Exercice03Component } from './exercices/exercice03/exercice03.component';
@@ -47,11 +50,14 @@ import { Exercice09Component } from './exercices/exercice09/exercice09.component
 import { ArticleListComponent } from './exercices/exercice11/article-list/article-list.component';
 import { Exercice11Component } from './exercices/exercice11/exercice11.component';
 import { Exercice15Component } from './exercices/exercice15/exercice15.component';
+import { DetailsComponent } from './exercices/exercice21/details/details.component';
+import { Exercice21Component } from './exercices/exercice21/exercice21.component';
 import { ExercicesComponent } from './exercices/exercices.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { PrepareRenderDirective } from './shared/directives/prepare-render.directive';
+import { TokenInterceptor } from './shared/interceptors/token.interceptor';
 import { ChronoPipe } from './shared/pipes/chrono.pipe';
 import { GetFormateurPipe } from './shared/pipes/get-formateur.pipe';
 import { ReducePipe } from './shared/pipes/reduce.pipe';
@@ -59,10 +65,6 @@ import { SecondsToDHMSPipe } from './shared/pipes/seconds-to-dhms.pipe';
 import { TemperatureConverterPipe } from './shared/pipes/temperature-converter.pipe';
 import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
 import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
-import { AddComponent } from './demos/demo21/add/add.component';
-import { UpdateComponent } from './demos/demo21/update/update.component';
-import { Exercice21Component } from './exercices/exercice21/exercice21.component';
-import { DetailsComponent } from './exercices/exercice21/details/details.component';
 
 
 @NgModule({
@@ -123,6 +125,7 @@ import { DetailsComponent } from './exercices/exercice21/details/details.compone
     UpdateComponent,
     Exercice21Component,
     DetailsComponent,
+    Demo22Component,
   ],
   imports: [
     BrowserModule,
@@ -131,7 +134,13 @@ import { DetailsComponent } from './exercices/exercice21/details/details.compone
     ReactiveFormsModule, // Important pour le fonctionnement du FormGroup
     HttpClientModule, // Important pour la communication avec une API
   ],
-  providers: [],
+  providers: [
+    // provide: indique que vous souhaitez enregistrer un intercepteur pour les requêtes HTTP
+    // useClass: la classe que votre intercepteur personnalisé qu'on souhaite utiliser
+    // multi: enregistrer plusieurs intercepteur de type HTTP_INTERCEPTORS
+    // - true : vous pouvez enregistrer plusieurs intercepteur dans le même provider
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

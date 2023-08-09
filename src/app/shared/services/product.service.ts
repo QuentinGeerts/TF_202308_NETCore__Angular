@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PatchName } from 'src/app/patch-name.model';
+import { PatchName } from 'src/app/shared/models/patch-name.model';
 import { Product } from '../models/product.model';
 
 @Injectable({
