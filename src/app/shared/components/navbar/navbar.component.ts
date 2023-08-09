@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FakeAuthService } from '../../services/fake-auth.service';
+import { FakeAuthObsService } from '../../services/fake-auth-obs.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +8,21 @@ import { FakeAuthService } from '../../services/fake-auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  isConnected: boolean = false;
+  isConnectedSubject: boolean = false;
+  isConnectedBehaviorSubject: boolean = false;
 
-  constructor (private _fakeAuthService: FakeAuthService) { }
-  
+  constructor (private _fakeAuthObsService: FakeAuthObsService) { }
+
   ngOnInit (): void {
-    this.isConnected = this._fakeAuthService.isLoggedIn();
+    // this.isConnected = this._fakeAuthObsService.isConnected;
+
+    this._fakeAuthObsService.statusSubject$.subscribe({
+      next: (data: boolean) => { console.log("statusSubject: ", data); this.isConnectedSubject = data; }
+    });
+
+    this._fakeAuthObsService.statusBehaviorSubject$.subscribe({
+      next: (data: boolean) => { console.log("statusBehaviorSubject: ", data); this.isConnectedBehaviorSubject = data }
+    });
   }
 
 }
