@@ -61,6 +61,8 @@ import { ToCelsiusPipe } from './shared/pipes/to-celsius.pipe';
 import { ToFahrenheitPipe } from './shared/pipes/to-fahrenheit.pipe';
 import { AddComponent } from './demos/demo21/add/add.component';
 import { UpdateComponent } from './demos/demo21/update/update.component';
+import { Exercice21Component } from './exercices/exercice21/exercice21.component';
+import { DetailsComponent } from './exercices/exercice21/details/details.component';
 
 
 @NgModule({
@@ -119,6 +121,8 @@ import { UpdateComponent } from './demos/demo21/update/update.component';
     Demo21Component,
     AddComponent,
     UpdateComponent,
+    Exercice21Component,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -40,11 +40,11 @@ import { Exercice08Component } from './exercices/exercice08/exercice08.component
 import { Exercice09Component } from './exercices/exercice09/exercice09.component';
 import { Exercice11Component } from './exercices/exercice11/exercice11.component';
 import { Exercice15Component } from './exercices/exercice15/exercice15.component';
+import { Exercice21Component } from './exercices/exercice21/exercice21.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { confirmGuard } from './shared/guards/confirm.guard';
 import { isAuthGuard } from './shared/guards/is-auth.guard';
-import { isLoggedInGuard } from './shared/guards/is-logged-in.guard';
 import { userResolver } from './shared/resolvers/user.resolver';
 
 const routes: Routes = [
@@ -93,7 +93,9 @@ const routes: Routes = [
   },
 
   {
-    path: 'exercices', canActivateChild: [isLoggedInGuard], children: [
+    path: 'exercices', 
+    // canActivateChild: [isLoggedInGuard], 
+    children: [
       { path: '', component: ExercicesComponent },
       { path: 'exo01', component: Exercice01Component },
       { path: 'exo02', component: Exercice02Component },
@@ -106,6 +108,7 @@ const routes: Routes = [
       { path: 'exo09', component: Exercice09Component },
       { path: 'exo11', component: Exercice11Component },
       { path: 'exo15', component: Exercice15Component },
+      { path: 'exo21', component: Exercice21Component },
     ]
   },
 
